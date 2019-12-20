@@ -15,8 +15,6 @@ class RingBuffer:
         else:
             self.current.value = item
             self.current = self.current.prev
-
-
     def get(self):
         # Note:  This is the only [] allowed
         list_buffer_contents = []
@@ -27,7 +25,7 @@ class RingBuffer:
             list_buffer_contents.append(current_item.value)
             current_item = current_item.prev
         list_buffer_contents.append(self.storage.head.value)
-        print(list_buffer_contents)
+        # print(list_buffer_contents)
         return list_buffer_contents
 
 
